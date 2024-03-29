@@ -15,6 +15,7 @@ function InputForm(props) {
     } else setIsBin(false);
   }
 
+  // helper function to check is number is binary
   function isBinary(array) {
     for (var i of array) {
       if (i !== '0' && i !== '1') return false;
