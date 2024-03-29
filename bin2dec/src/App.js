@@ -1,11 +1,21 @@
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [binInput, setBinInput] = useState('');
   return (
     <div>
       <label>
-        Binary Input: <input name="binInput"/>
+        Binary Input: 
+        <input 
+          value={binInput}
+          onChange={e => setBinInput(e.target.value)}
+        />
       </label>
+      <hr />
+      {binInput !== '' &&
+        <h1>Your binary number is {binInput}</h1>
+      }
     </div>
   );
 }
