@@ -1,30 +1,27 @@
 import './App.css';
 import { useState } from 'react';
+import InputForm from './InputForm.js';
+import DecimalOutput from './DecimalOutput';
 
 function App() {
+  const [binInput, setBinInput] = useState('');
+
+  const handleBinInput = (binNumber) => {
+    setBinInput(binNumber);
+  }
+
   return (
     <>
-      <InputForm />
-    </>
-  );
-}
-
-function InputForm() {
-  const [binInput, setBinInput] = useState('');
-  return (
-    <div>
-      <label>
-        Binary Input: 
-        <input 
-          value={binInput}
-          onChange={e => setBinInput(e.target.value)}
-        />
-      </label>
-      <hr />
-      {binInput !== '' &&
-        <h1>Your binary number is {binInput}</h1>
+      <InputForm 
+        onBinNumberEntered={handleBinInput}
+      />
+      { binInput !== '' &&
+        <h1>Your bin num is {binInput}</h1>
       }
-    </div>
+      <DecimalOutput 
+        binNumber={binInput}
+      />
+    </>
   );
 }
 
