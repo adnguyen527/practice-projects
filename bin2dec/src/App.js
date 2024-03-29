@@ -2,6 +2,14 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
+  return (
+    <>
+      <InputForm />
+    </>
+  );
+}
+
+function InputForm() {
   const [binInput, setBinInput] = useState('');
   return (
     <div>
