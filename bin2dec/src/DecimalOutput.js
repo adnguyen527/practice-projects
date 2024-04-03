@@ -2,6 +2,7 @@ import {  useEffect, useState } from 'react';
 
 export default function DecimalOutput(props) {
     var binArray = props.binArray;
+    var isBin = props.isBin;
     const [decimalNum, setDecimalNum] = useState('');
 
     // when binArray is changed
@@ -17,7 +18,7 @@ export default function DecimalOutput(props) {
 
     return (
         <>
-            { !(binArray.length === 0) && 
+            { !(binArray.length === 0 || !isBin) && 
                 <h1>Your Binary Number as a Decimal Number is {decimalNum}.</h1>
             }
         </>

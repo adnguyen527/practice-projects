@@ -12,7 +12,12 @@ function InputForm(props) {
     if (isBinary(binArray)) {
       setIsBin(true);
       props.onBinNumberEntered(binArray);
-    } else setIsBin(false);
+      props.binaryCheck(true);
+    } else {
+      setIsBin(false);
+      props.binaryCheck(false);
+
+    }
   }
 
   // helper function to check is number is binary
