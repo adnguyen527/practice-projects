@@ -18,7 +18,7 @@ export default function DecimalOutput(props) {
 
     return (
         <>
-            { !(binArray.length === 0 || !isBin) && 
+            { !(binArray.length === 0 || !isBin || !(binArray.length <= 8)) && 
                 <h1>Your Binary Number as a Decimal Number is {decimalNum}.</h1>
             }
         </>

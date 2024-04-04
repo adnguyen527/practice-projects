@@ -40,10 +40,10 @@ function InputForm(props) {
           { (!isBin && binInput !== '') && 
             <p>This is not a Binary Number!</p>
           }
-          { (!isBin && binInput.length > 8) &&
+          { (binInput.length > 8) &&
             <p>No more than 8 digits!</p>
           }
-          { (isBin && binInput !== '') && 
+          { (isBin && binInput !== '' && binInput <= 8) && 
             <h1>Your Binary Number is {binInput}.</h1>
           }
         </label>
