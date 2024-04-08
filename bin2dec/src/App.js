@@ -1,4 +1,4 @@
-import './App.css';
+import './styles.css';
 import { useState } from 'react';
 import InputForm from './InputForm.js';
 import DecimalOutput from './DecimalOutput';
@@ -16,8 +16,8 @@ function App() {
   }
 
   return (
-    <>
-      <InputForm 
+    <div className='center'>
+      <InputForm
         onBinNumberEntered={handleBinInput}
         binaryCheck={handleBinCheck}
       />
@@ -25,7 +25,7 @@ function App() {
         binArray={binArray}
         isBin={isBin}
       />
-    </>
+    </div>
   );
 }
 

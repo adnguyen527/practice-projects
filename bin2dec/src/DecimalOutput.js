@@ -17,10 +17,10 @@ export default function DecimalOutput(props) {
     }, [binArray]);
 
     return (
-        <>
+        <div className='center'>
             { !(binArray.length === 0 || !isBin || !(binArray.length <= 8)) && 
                 <h1>Your Binary Number as a Decimal Number is {decimalNum}.</h1>
             }
-        </>
+        </div>
     );
 }

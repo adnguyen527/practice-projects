@@ -1,3 +1,4 @@
+import './styles.css';
 import { useState } from "react";
 
 function InputForm(props) {
@@ -29,7 +30,7 @@ function InputForm(props) {
   }
   
     return (
-      <div>
+      <div className='center'>
         <label>
           Binary Input: 
           <input 
@@ -39,11 +40,11 @@ function InputForm(props) {
           />
           { (!isBin && binInput !== '') && 
             <p>This is not a Binary Number!</p>
-          }
+          } 
           { (binInput.length > 8) &&
             <p>No more than 8 digits!</p>
           }
-          { (isBin && binInput !== '' && binInput <= 8) && 
+          { (isBin && binInput !== '' && binInput.length <= 8) && 
             <h1>Your Binary Number is {binInput}.</h1>
           }
         </label>
