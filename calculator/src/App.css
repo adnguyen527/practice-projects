@@ -37,8 +37,25 @@
   }
 } */
 
-input {
+input.round {
   font-style: 20px;
   color: white;
-  
+  border: none;
+  padding: 5px;
+  font-style: 31px;
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+}
+
+orange {
+  background-color: orange;
+}
+
+input.round.darkGrey {
+  background-color: darkgray;
+}
+
+input.round.lightGrey {
+  background-color: lightgray;
 }
