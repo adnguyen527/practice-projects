@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -30,9 +30,15 @@
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
   }
+  transform: rotate(0deg);
+  transform: rotate(360deg);
   to {
-    transform: rotate(360deg);
   }
+} */
+
+input {
+  font-style: 20px;
+  color: white;
+  
 }
